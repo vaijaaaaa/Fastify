@@ -1,4 +1,4 @@
-const authController = require("../controllers/authController.js");
+const authController = require("../controllers/authControllers");
 
 module.exports = async function (fastify,opts){
     
