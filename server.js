@@ -30,13 +30,19 @@ fastify.register(require("@fastify/env"),{
 
 //register a plugin
 fastify.register(require("./plugins/mongodb"));
+fastify.register(require("./plugins/jwt"));
 
+
+
+//register routes
+fastify.register(require("./routes/auth"),{prefix:"/api/auth"});
 
 //Declare a route
 fastify.get("/",function(request,reply){
     reply.send({hello: "world"});
 }
 );
+
 
 //test database connection
 
